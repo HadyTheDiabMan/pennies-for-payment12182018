@@ -26,7 +26,7 @@ public class Penniesforpay {
 		
 		for(int i=0;i!=days;i++)
 		{
-			salaryydouble=salaryydouble+salaryydouble;
+			salaryydouble+=salaryydouble;
 			System.out.printf("\n%-15d Pennies:%15f",dayscomp,salaryydouble);
 			dayscomp=dayscomp+1;
 		}
