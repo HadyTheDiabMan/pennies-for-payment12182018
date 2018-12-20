@@ -11,28 +11,27 @@ public class Penniesforpay {
 	{
 		Scanner user=new Scanner(System.in);
 		System.out.println("Enter in the number of days you would like to earn pennies: ");
-		int days= user.nextInt();
-		long salaryy=1;
+		double days= user.nextDouble();
+		double salaryy=1;
 		String day="Days";
 		String salary="Salary(Pennies)";
-		while(days>64)
-		{
-			System.out.println("Invalid number of days. Please select an integer less than that: ");
-			days=user.nextInt();
-		}
-		System.out.printf("%-20s %20s",day,salary);
-		int dayscomp=1;
-		double salaryydouble= (double) salaryy;
 		
+		System.out.printf("%-15s %15s",day,salary);
+		int dayscomp=1;
+		double totalpayday=0;
 		for(int i=0;i!=days;i++)
 		{
-			salaryydouble+=salaryydouble;
-			System.out.printf("\n%-15d Pennies:%15f",dayscomp,salaryydouble);
+			salaryy+=salaryy;
+			totalpayday=++salaryy;
+			
+			System.out.printf("\n%1d %25f",dayscomp,salaryy);
 			dayscomp=dayscomp+1;
+			
 		}
-		salaryydouble=salaryydouble/100;
+		totalpayday=totalpayday/100;
 		String total= "Total";
-		System.out.printf("\n%-15s $%15f",total,salaryydouble);
+		System.out.printf("\n%35s","Dollars");
+		System.out.printf("\n%-15s $%15.2f",total,totalpayday);
 		
 	}
 
