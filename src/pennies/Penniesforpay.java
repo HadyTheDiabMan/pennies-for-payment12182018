@@ -17,20 +17,23 @@ public class Penniesforpay {
 		String salary="Salary(Pennies)";
 		while(days>64)
 		{
-			System.out.println("Invalid number of days.ase select an integer less than that: ");
+			System.out.println("Invalid number of days. Please select an integer less than that: ");
 			days=user.nextInt();
 		}
 		System.out.printf("%-20s %20s",day,salary);
 		int dayscomp=1;
-		double salaryydouble= Double.parseDouble(salaryy);
+		double salaryydouble= (double) salaryy;
 		
 		for(int i=0;i!=days;i++)
 		{
-			
-			System.out.printf("\n%-20d %20d",dayscomp,salaryy);
-			salaryy=salaryy+salaryy;
+			salaryydouble=salaryydouble+salaryydouble;
+			System.out.printf("\n%-15d Pennies:%15f",dayscomp,salaryydouble);
 			dayscomp=dayscomp+1;
 		}
+		salaryydouble=salaryydouble/100;
+		String total= "Total";
+		System.out.printf("\n%-15s $%15f",total,salaryydouble);
+		
 	}
 
 }
